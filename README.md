@@ -3,7 +3,9 @@
 > ### Usage
 
 ```java
-import javax.print.Doc;
+import com.mongodb.client.MongoCollection;
+import org.bson.Document;
+import org.bson.conversions.Bson;
 
 public class example {
 
