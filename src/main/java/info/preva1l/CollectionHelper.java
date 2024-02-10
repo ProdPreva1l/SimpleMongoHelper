@@ -6,7 +6,7 @@ import org.bson.conversions.Bson;
 
 public class CollectionHelper {
     private final SimpleMongoHelper database;
-    public final CacheHandler cacheHandler;
+    private final CacheHandler cacheHandler;
 
     /**
      * Init the collection helper
