@@ -1,5 +1,9 @@
 # A Way too simple mongo helper
 
+Wtf does it do?
+- Automatic in-memory caching
+- Makes it a little easier to use mongo even tho its already so amazingly simple
+
 > ### Usage
 
 ```java
