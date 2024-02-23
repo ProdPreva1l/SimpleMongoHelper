@@ -1,12 +1,14 @@
 package info.preva1l;
 
-import com.mongodb.*;
+import com.mongodb.MongoClientSettings;
+import com.mongodb.MongoCredential;
+import com.mongodb.ServerAddress;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoDatabase;
 import lombok.Getter;
 
-import java.util.List;
+import java.util.Collections;
 
 @Getter
 public class SimpleMongoHelper {
@@ -27,7 +29,7 @@ public class SimpleMongoHelper {
 
         MongoClientSettings settings = MongoClientSettings.builder()
                 .credential(credential)
-                .applyToClusterSettings(builder -> builder.hosts(List.of(serverAddress)))
+                .applyToClusterSettings(builder -> builder.hosts(Collections.singletonList(serverAddress)))
                 .build();
 
         this.mongoClient = MongoClients.create(settings);
@@ -49,7 +51,7 @@ public class SimpleMongoHelper {
 
         MongoClientSettings settings = MongoClientSettings.builder()
                 .credential(credential)
-                .applyToClusterSettings(builder -> builder.hosts(List.of(serverAddress)))
+                .applyToClusterSettings(builder -> builder.hosts(Collections.singletonList(serverAddress)))
                 .build();
 
         this.mongoClient = MongoClients.create(settings);
